@@ -14,10 +14,9 @@ class ListAllUsersController {
       });
 
       return response.json(users);
-    } catch (e) {
+    } catch (error) {
       return response.status(400).json({
-        error: true,
-        message: e.message,
+        error: error.message,
       });
     }
   }
